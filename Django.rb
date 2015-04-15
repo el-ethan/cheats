@@ -8,7 +8,7 @@ cheatsheet do
 
   # A cheat sheet must consist of categories
   category do
-    id 'Setup'  # Must be unique and is used as title of the category
+    id 'Common Commands'
 
     entry do
       command '$ django-admin startproject mysite'
@@ -20,6 +20,22 @@ cheatsheet do
       command '$ python manage.py startapp myapp'
       name 'Create a new app'
       notes 'Create an app "myapp"'
+    end
+
+    entry do
+      command '$ python manage.py migrate'
+      name 'Create initial database tables'
+    end
+
+    entry do
+      command '$ python manage.py runserver'
+      name 'Start development server'
+      notes 'Start development server for testing purposes. This sever is located at [http://127.0.0.1:8000/](http://127.0.0.1:8000/)'
+    end
+
+    entry do
+      command '$ python manage.py makemigrations myapp'
+      name 'Store changes to models as *migrations* after models have been updated'
     end
 
   end
