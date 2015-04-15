@@ -11,10 +11,17 @@ cheatsheet do
     id 'Setup'  # Must be unique and is used as title of the category
 
     entry do
-      command '$ django-admin startproject mysite' # Multiple commands are supported
-      name 'Start new project'    # A short name, can contain Markdown or HTML
+      command '$ django-admin startproject mysite'
+      name 'Start new project'    # Short name
       notes 'Start a new project named "mysite" in the current working directory'      # Optional longer explanation, can contain Markdown or HTML
     end
+
+    entry do
+      command '$ python manage.py startapp myapp'
+      name 'Create a new app'
+      notes 'Create an app "myapp"'
+    end
+
   end
 
   # category do
