@@ -8,6 +8,22 @@ cheatsheet do
 
   # A cheat sheet must consist of categories
   category do
+    id 'Migrate to changes made to models.py'
+
+    entry do
+      command '$ python3 manage.py makemigrations'
+      name 'Create migrations'
+    end
+
+    entry do
+      command '$ python3 manage.py migrate'
+      name 'Apply changes'
+    end
+
+  end
+
+
+  category do
     id 'Common Commands'
 
     entry do
