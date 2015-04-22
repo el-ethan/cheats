@@ -22,6 +22,16 @@ cheatsheet do
 
   end
 
+  category do
+    id 'Admin'
+
+    entry do
+      command '$ python3 manage.py createsuperuser'
+      name 'Create new admin user'
+    end
+
+
+  end
 
   category do
     id 'Common Commands'
@@ -46,12 +56,18 @@ cheatsheet do
     entry do
       command '$ python manage.py runserver'
       name 'Start development server'
-      notes 'Start development server for testing purposes. This sever is located at [http://127.0.0.1:8000/](http://127.0.0.1:8000/)'
+      notes 'Start development server for testing purposes. This sever is located at [http://127.0.0.1:8000/](http://127.0.0.1:8000/), or [http://127.0.0.1:8000/admin/](http://127.0.0.1:8000/admin/) for the admin login'
     end
 
     entry do
       command '$ python manage.py makemigrations myapp'
       name 'Store changes to models as *migrations* after models have been updated'
+    end
+
+    entry do
+      command '$ python3 manage.py shell'
+      name 'Invoke interactive Python shell'
+      notes 'Start an interactive session with your settings.py file added to the Python import path'
     end
 
   end
